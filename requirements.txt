@@ -1,0 +1,5 @@
+pillow>=11.3.0
+setuptools==80.9.0
+twine==6.2.0
+wheel==0.45.1
+pytest==8.4.2
