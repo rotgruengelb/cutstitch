@@ -141,7 +141,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "$tag" &>/dev/null; then
-            gh release delete "$tag" --yes
+          if gh release view ${{ needs.details.outputs.tag_name }} &>/dev/null; then
+            gh release delete ${{ needs.details.outputs.tag_name }} --yes
           fi
           gh release create ${{ needs.details.outputs.tag_name }} dist/* --title ${{ needs.details.outputs.tag_name }} --generate-notes
