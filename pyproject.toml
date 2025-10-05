@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cutstitch"
 description = "A tool to stitch images together using various cutout modes."
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
