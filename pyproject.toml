@@ -7,7 +7,7 @@ name = "cutstitch"
 description = "A tool to stitch images together using various cutout modes."
 version = "0.0.0" # set by uv during release
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "rotgruengelb", email = "daniel+cutstitch@rotgruengelb.net" }]
 keywords = ["image", "stitch", "cutout", "cli", "tool"]
