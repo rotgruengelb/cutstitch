@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=80.9.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cutstitch"
+description = "A tool to stitch images together using various cutout modes."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "rotgruengelb", email = "daniel+cutstitch@rotgruengelb.net" }]
+keywords = ["image", "stitch", "cutout", "cli", "tool"]
+dependencies = ["pillow>=11.3.0"]
+
+classifiers = ["Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Artistic Software",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Utilities",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console"]
+
+[project.scripts]
+cutstitch = "cutstitch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rotgruengelb/cutstitch"
+Documentation = "https://github.com/rotgruengelb/cutstitch#readme"
+Source = "https://github.com/rotgruengelb/cutstitch"
+Tracker = "https://github.com/rotgruengelb/cutstitch/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests", "tests.*"]
+
