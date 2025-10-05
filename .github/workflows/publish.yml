@@ -85,7 +85,7 @@ jobs:
 
       - name: Set project version
         run: |
-          uv version set ${{ needs.details.outputs.new_version }}
+          uv version ${{ needs.details.outputs.new_version }}
 
       - name: Install dependencies
         run: uv sync --no-interactive
