@@ -88,7 +88,7 @@ jobs:
           uv version ${{ needs.details.outputs.new_version }}
 
       - name: Install dependencies
-        run: uv sync --no-interactive
+        run: uv sync
 
       - name: Build source and wheel distribution
         run: uv build
