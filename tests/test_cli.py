@@ -1,6 +1,6 @@
 import subprocess
 from pathlib import Path
-from utils import compute_image_hash
+from .utils import compute_image_hash
 
 ASSETS = Path(__file__).parent / "assets"
 

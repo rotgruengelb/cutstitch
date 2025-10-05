@@ -1,4 +1,7 @@
 import argparse
+
+from PIL import Image
+
 from .core import stitch_images
 from .modes import CUTOUT_MODES
 
@@ -14,8 +17,9 @@ def main():
     if len(args.files) < 2:
         raise RuntimeError("Must provide at least two image files")
 
-    stitched_file = stitch_images(args.files, args.mode, args.output, angle=args.angle)
-    print(f"Saved stitched image to {stitched_file}")
+    images = [Image.open(path).convert("RGBA") for path in args.files]
+    stitch_images(images, args.mode, angle=args.angle).save(args.output)
+    print(f"Saved stitched image to {args.output}")
 
 
 if __name__ == "__main__":
